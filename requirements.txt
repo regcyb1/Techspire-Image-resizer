@@ -1,0 +1,25 @@
+# Core dependencies
+gradio>=4.0.0
+Pillow>=10.0.0
+
+# GPU acceleration (PyTorch)
+# Install the correct version for your platform:
+#
+#   macOS (Apple Silicon / Intel):
+#     pip install torch torchvision
+#
+#   Windows / Linux (NVIDIA CUDA 12.x):
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+#
+#   Windows / Linux (CPU only):
+#     pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#
+torch
+torchvision
+
+# Optional: high-speed image processing (5-10x faster than Pillow)
+# Requires system library — see README.md for install instructions
+# pyvips
+
+# Optional: for bundling as standalone executable
+# pyinstaller
