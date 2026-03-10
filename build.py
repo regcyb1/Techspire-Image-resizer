@@ -57,12 +57,12 @@ def main():
 
     if result.returncode == 0:
         print("\n" + "="*50)
-        print("✅ Build Successful!")
+        print("[SUCCESS] Build Successful!")
         print(f"Your standalone executable is located at: dist/{binary_name}")
         print("You can distribute this single file to other users on the same OS.")
         print("="*50)
     else:
-        print("\n❌ Build failed. Check the logs above.")
+        print("\n[ERROR] Build failed. Check the logs above.")
         sys.exit(1)
 
 if __name__ == "__main__":
