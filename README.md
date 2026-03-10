@@ -29,9 +29,24 @@ python resize_app.py
 
 ---
 
-## Installation by Platform
+## 📦 Download for Non-Technical Users (No Installation Required)
 
-### macOS (Apple Silicon — M1/M2/M3/M4)
+You do not need to install Python or use a terminal. Just download the app and double-click it!
+
+1. Go to the **Releases** page (or use the provided download link).
+2. Download the version for your computer:
+   - **Windows**: `ImageResizer-Windows.exe`
+   - **Mac**: `ImageResizer-macOS`
+   - **Linux**: `ImageResizer-Linux`
+3. Double-click the downloaded file to run it. The app will automatically open in your web browser.
+
+> **Note**: For Mac and Linux, you might need to right-click and allow execution the first time, or run `chmod +x ImageResizer-macOS` in the terminal.
+
+---
+
+## 🛠️ Developer Installation (For PyTorch GPU Support)
+
+If you are a developer and want maximum speed via PyTorch GPU hardware acceleration (NVIDIA CUDA or Apple Metal MPS), follow these steps to install via Python.
 
 ```bash
 python3 -m venv venv
@@ -156,24 +171,11 @@ python resize_app.py
 
 ## Packaging as Standalone Executable
 
-```bash
-pip install pyinstaller
+If you modify the code and want to build your own executable:
 
-pyinstaller \
-  --onefile \
-  --name ImageResizer \
-  --hidden-import=gradio \
-  --hidden-import=PIL \
-  --collect-all gradio \
-  resize_app.py
+```bash
+# This script handles downloading PyInstaller and configuring all Gradio assets
+python build.py
 ```
 
-The executable will be in `dist/ImageResizer`. Double-click to run.
-
-> **Note**: pyvips requires the native `libvips` library on PATH. PyTorch adds ~2GB to the bundle size.
-
----
-
-## License
-
-MIT — use freely.
+The executable will be placed in the `dist/` folder.
