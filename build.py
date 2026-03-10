@@ -47,6 +47,7 @@ def main():
         # Gradio needs its assets and templates
         "--collect-all=gradio",
         "--collect-data=gradio_client",
+        "--collect-all=safehttpx",
         # Pillow needs to be explicitly imported sometimes
         "--hidden-import=PIL",
         "--hidden-import=PIL._tkinter_finder",
