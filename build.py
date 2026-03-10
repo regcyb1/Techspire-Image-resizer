@@ -48,6 +48,11 @@ def main():
         "--collect-all=gradio",
         "--collect-data=gradio_client",
         "--collect-all=safehttpx",
+        "--collect-all=groovy",
+        "--collect-all=httpx",
+        "--collect-all=starlette",
+        "--collect-all=fastapi",
+        "--collect-all=pydantic",
         # Pillow needs to be explicitly imported sometimes
         "--hidden-import=PIL",
         "--hidden-import=PIL._tkinter_finder",
